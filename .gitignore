@@ -1,0 +1,11 @@
+# 환경 변수 (API 키 포함)
+.env
+.env.local
+.env.*.local
+
+# Claude Code 로컬 설정
+.claude/
+
+# OS
+.DS_Store
+Thumbs.db
