@@ -28,7 +28,7 @@ async def upload_receipt(file: UploadFile = File(...)):
 
     # OCR 파싱
     try:
-        parsed = await parse_receipt(file_bytes, file.content_type)
+        parsed = await parse_receipt(file_bytes, file.content_type, file.filename or "receipt")
     except Exception as e:
         raise HTTPException(
             status_code=500,
